@@ -1,0 +1,24 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: post.query
+  datasource:
+    url: jdbc:postgres://localhost:5432/social_media_post?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: postgres
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+      group-id: post
+      auto-offset-reset: earliest
+kafka:
+  topic:
+    name: post-events
