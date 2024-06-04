@@ -1,5 +1,6 @@
 package com.example.post.query.service;
 
+import com.example.post.query.domain.dto.KafkaStatus;
 import com.example.post.query.domain.response.PostResponse;
 import com.example.post.query.entity.Post;
 
@@ -10,4 +11,6 @@ public interface PostService {
     PostResponse getPostById(Long id);
     void savePost(Post req);
     void deletePost(Post req);
+
+    void listener(KafkaStatus<Post> status);
 }
