@@ -12,6 +12,7 @@ import org.springframework.kafka.support.converter.JsonMessageConverter;
 import org.springframework.kafka.support.converter.RecordMessageConverter;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -39,7 +40,7 @@ public class PostServiceImpl implements PostService{
                 .content(req.getContent())
                 .likeNum(0)
                 .scrapNum(0)
-                .createdAt(req.getCreatedAt())
+                .createdAt(new Date())
                 .file(req.getFile())
                 .fileType(req.getFileType())
                 .isDisable(false)

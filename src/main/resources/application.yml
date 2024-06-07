@@ -4,7 +4,7 @@ spring:
   application:
     name: post.query
   datasource:
-    url: jdbc:postgres://localhost:5432/social_media_post?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    url: jdbc:postgresql://localhost:5432/social_media_post?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
     username: postgres
     password: 1234
   jpa:

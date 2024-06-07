@@ -18,11 +18,11 @@ public class PostController {
 
     @GetMapping
     public List<PostResponse> getAllPosts() {
-        return null;
+        return postService.getAllPosts();
     }
 
     @GetMapping("{id}")
     public PostResponse getPostById(@PathVariable Long id) {
-        return null;
+        return postService.getPostById(id);
     }
 }
